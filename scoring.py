@@ -1,3 +1,4 @@
+
 def totalscore(dice):
     return sum(dice)
 
@@ -83,5 +84,3 @@ def bonuscheck(scorecategories):
     if upperscore>=63:
         return 50
     return 0
-def displayscoreboard(scoredcategories):
-    return f'You scored {score} points in the {category}',filledcategories
