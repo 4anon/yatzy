@@ -47,8 +47,4 @@ def categorychoice(pssibility,filledcategories,cast):
     score=scorecalculation(cast,category)
     filledcategories[category]=score
     return f'You scored {score} points in the {category}',filledcategories
-    if upperscore>=63:
-        return 50
-    return 0
-def displayscoreboard(scoredcategories):
-    return f'You scored {score} points in the {category}',filledcategories
+
