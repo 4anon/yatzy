@@ -1,0 +1,87 @@
+def totalscore(dice):
+    return sum(dice)
+
+def yatzycheck(dice):
+    score=0
+    if dice.count(dice[0])==5:
+        score=50
+    return score
+
+def scorenumber(dice,number):
+    count=dice.count(number)
+    score=count*number
+    return score
+def scorepair(dice):
+    pairs=[]
+    for die in set(dice):
+        if dice.count(die)>=2:
+            pairs.append(die)
+    score=0
+    highestpair=0
+    if len(pairs)>0:
+        highestpair=max(pairs)
+    else:
+        highestpair=0
+    score=highestpair*2
+    return score
+
+def onepair(dice):
+    for die in set(dice):
+        if dice.count(die)>=2:
+            score=die*2
+            return score
+    return 0
+def twopair(dice):
+    pairs=[]
+    for die in set(dice):
+        if dice.count(die)>=2:
+            pairs.append(die)
+    if len(pairs)>=2:
+        score=(pairs[0]*2)+(pairs[1]*2)
+        return score
+    return 0
+
+def threekind(dice):
+    for die in set(dice):
+        if dice.count(die)>=3:
+            score=die*3
+            return score
+    return 0
+
+def fourkind(dice):
+    for die in set(dice):
+        if dice.count(die)>=4:
+            score=die*4
+            return score
+    return 0
+def smallstraight(dice):
+    sorteddice=sorted(set(dice))
+   if sorteddice==[1,2,3,4,5]:
+       return 15
+   return 0
+def largestraight(dice):
+    sorteddice=sorted(set(dice))
+    if sorteddice==[2,3,4,5,6]:
+        return 20
+    return 0
+def fullhouse(dice):
+    unidice=set(dice)
+    if len(unidice)==2:
+        countone=dice.count(unidice[0])
+        countsecond=dice.count(unidice[1])
+        if (countone==3 and countsecond==2) or (countone==2 and countsecond==3):
+            score=unidice[0]*countone+unidice[1]*countsecond
+            return score
+    return 0
+            
+def bonuscheck(scorecategories):
+    uppersection=['ones','twos','threes','fours','fives','sixes']
+    upperscore=0
+    for category in uppersection:
+        if category in scored categories:
+            upperscore+=scoredcategories[category]
+    if upperscore>=63:
+        return 50
+    return 0
+def displayscoreboard(scoredcategories):
+    return f'You scored {score} points in the {category}',filledcategories
